@@ -28,3 +28,15 @@ function createEmployeeRecords(srArr){
       myObj.timeInEvents.push(timeIn);
       return myObj;
  }
+ 
+ function createTimeOutEvent(empinfo,time){
+    let myTime2= time.split(' ');
+    let timeOut ={
+        type: "TimeOut",
+        hour: parseInt(myTime2[1]),
+        date: myTime2[0]
+    }
+     let myObj2= Object.assign({}, empinfo);
+     myObj2.timeOutEvents.push(timeOut);
+     return myObj2;
+ }
